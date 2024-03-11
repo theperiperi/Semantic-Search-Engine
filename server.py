@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Your YouTube API key
-API_KEY = "AIzaSyDTqLWARQ2OlS4hBKucFWacXyh9tVjDrsY"
+API_KEY = "enter ur apikey here"
 
 # Initialize the YouTube API client
 youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=API_KEY)
