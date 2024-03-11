@@ -12,7 +12,7 @@ API_KEY = "AIzaSyDTqLWARQ2OlS4hBKucFWacXyh9tVjDrsY"
 # Initialize the YouTube API client
 youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=API_KEY)
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='.')
 CORS(app)
 
 def fetch_videos(query):
@@ -72,6 +72,13 @@ def semantic_search(user_query, videos):
     # Return sorted videos based on combined score
     sorted_videos = [(videos[i]['title'], videos[i]['description'], combined_scores[i]) for i in sorted_indices]
     return sorted_videos
+
+@app.route('/')
+def index():
+    """
+    Serve the index.html file.
+    """
+    return app.send_static_file('index.html')
 
 @app.route('/api/search', methods=['POST'])
 def search():
