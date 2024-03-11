@@ -1,6 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 20px;
+    background-color: #f7f7f7; /* Off-White Background */
+    color: #333333; /* Almost Black Text Color */
 }
 
 h1 {
@@ -16,6 +18,7 @@ input[type="text"] {
     flex: 1;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
 }
 
 button {
@@ -25,6 +28,7 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -37,8 +41,11 @@ button:hover {
 
 .result {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+    background-color: #dff0d8; /* Mint Rectangle Background */
 }
 
 .result h3 {
@@ -46,5 +53,6 @@ button:hover {
 }
 
 .result p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: #333333; /* Almost Black Text Color */
 }
