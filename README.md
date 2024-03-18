@@ -1,4 +1,4 @@
-![image](https://github.com/theperiperi/Semantic-Search-Engine/assets/121922820/ce8ae695-37bb-46f8-b152-b8e89d928932)# Semantic Search Using BM25 and Cosine Similarity: A Comparative Analysis with Classifiers
+# Semantic Search Using BM25 and Cosine Similarity: A Comparative Analysis with Classifiers
 
 ## Datasets Description
 The dataset consists of YouTube video descriptions used for semantic search. Each video description is preprocessed for BM25 and cosine similarity calculations. The dataset includes a variety of video topics and lengths to ensure diverse search scenarios.
