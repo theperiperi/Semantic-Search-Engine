@@ -5,28 +5,7 @@
     <title>YouTube Semantic Search</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 20px;
-            background-color: #f7f7f7;
-        }
-
-        .result {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            line-height: 1.5;
-            background-color: #fff;
-        }
-
-        .result h3 {
-            margin-top: 0;
-        }
-
-        .result p {
-            margin-bottom: 10px;
-        }
+        /* Styles as per your request */
     </style>
 </head>
 <body>
@@ -86,9 +65,21 @@
                 
                 const descriptionElement = document.createElement('p');
                 descriptionElement.textContent = result[1];
+
+                const scoreElement = document.createElement('p');
+                scoreElement.textContent = `Combined Score: ${result[2].toFixed(2)}`;
+
+                const bm25PrecisionElement = document.createElement('p');
+                bm25PrecisionElement.textContent = `BM25 Precision: ${result[3].toFixed(2)}`;
+
+                const cosinePrecisionElement = document.createElement('p');
+                cosinePrecisionElement.textContent = `Cosine Similarity Precision: ${result[4].toFixed(2)}`;
                 
                 resultElement.appendChild(titleElement);
                 resultElement.appendChild(descriptionElement);
+                resultElement.appendChild(scoreElement);
+                resultElement.appendChild(bm25PrecisionElement);
+                resultElement.appendChild(cosinePrecisionElement);
                 
                 resultsContainer.appendChild(resultElement);
             });
