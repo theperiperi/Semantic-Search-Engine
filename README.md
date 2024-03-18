@@ -7,7 +7,7 @@ The dataset consists of YouTube video descriptions used for semantic search. Eac
 ![image](https://github.com/theperiperi/Semantic-Search-Engine/assets/121922820/ce8ae695-37bb-46f8-b152-b8e89d928932)
 
 ## Code
-The code for this project can be found in the [GitHub repository](https://github.com/theperiperi/Semantic-Search-Engine/edit/main/README.md).
+The code for this project can be found in the [GitHub repository](https://github.com/theperiperi).
 
 ## Comparison of Results with Classifiers
 ### Classifier 1: Support Vector Machine (SVM)
