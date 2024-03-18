@@ -4,8 +4,7 @@
 The dataset consists of YouTube video descriptions used for semantic search. Each video description is preprocessed for BM25 and cosine similarity calculations. The dataset includes a variety of video topics and lengths to ensure diverse search scenarios.
 
 ## System Diagram
-![System Diagram](![image](https://github.com/theperiperi/Semantic-Search-Engine/assets/121922820/66f556fe-3ea9-435f-8ba6-ceefb215c912)
-)
+![image](https://github.com/theperiperi/Semantic-Search-Engine/assets/121922820/ce8ae695-37bb-46f8-b152-b8e89d928932)
 
 ## Code
 The code for this project can be found in the [GitHub repository](https://github.com/theperiperi/Semantic-Search-Engine/edit/main/README.md).
