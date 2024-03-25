@@ -61,25 +61,17 @@
                 resultElement.classList.add('result');
                 
                 const titleElement = document.createElement('h3');
-                titleElement.textContent = result[0];
+                titleElement.textContent = result['title'];
                 
                 const descriptionElement = document.createElement('p');
-                descriptionElement.textContent = result[1];
+                descriptionElement.textContent = result['description'];
 
                 const scoreElement = document.createElement('p');
-                scoreElement.textContent = `Combined Score: ${result[2].toFixed(2)}`;
-
-                const bm25PrecisionElement = document.createElement('p');
-                bm25PrecisionElement.textContent = `BM25 Precision: ${result[3].toFixed(2)}`;
-
-                const cosinePrecisionElement = document.createElement('p');
-                cosinePrecisionElement.textContent = `Cosine Similarity Precision: ${result[4].toFixed(2)}`;
+                scoreElement.textContent = `Combined Score: ${result['combined_score'].toFixed(2)}`;
                 
                 resultElement.appendChild(titleElement);
                 resultElement.appendChild(descriptionElement);
                 resultElement.appendChild(scoreElement);
-                resultElement.appendChild(bm25PrecisionElement);
-                resultElement.appendChild(cosinePrecisionElement);
                 
                 resultsContainer.appendChild(resultElement);
             });
