@@ -5,6 +5,8 @@ from rank_bm25 import BM25Okapi
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 # Your YouTube API key
 API_KEY = "AIzaSyDTqLWARQ2OlS4hBKucFWacXyh9tVjDrsY"
@@ -42,11 +44,10 @@ def preprocess_text(text):
     # You can add more advanced text preprocessing steps here
     return text.lower().split()
 
-import numpy as np
 def semantic_search(user_query, videos):
     """
     Performs semantic search using BM25 and cosine similarity.
-    Only returns combined score for each result.
+    Normalizes combined score for each result to ensure it's within [0, 1].
     """
     # BM25 ranking
     corpus = [' '.join(preprocess_text(video['description'])) for video in videos]
@@ -69,10 +70,14 @@ def semantic_search(user_query, videos):
     # Combine scores
     combined_scores = 0.6 * bm25_scores + 0.4 * cosine_similarities  # Weighted sum
 
+    # Normalize scores to [0, 1]
+    scaler = MinMaxScaler()
+    combined_scores = scaler.fit_transform(np.array([combined_scores]).T).flatten()
+
     # Sort videos by combined score
     sorted_indices = combined_scores.argsort()[::-1]
 
-    # Return sorted videos with combined score
+    # Return sorted videos with normalized combined score
     sorted_videos = []
     for i in sorted_indices:
         video = videos[i]
